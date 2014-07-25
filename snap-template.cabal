@@ -54,7 +54,9 @@ extra-source-files:
   project_template/tutorial/foo.cabal,
   project_template/tutorial/log/placeholder,
   project_template/tutorial/src/Part2.lhs,
-  project_template/tutorial/src/Tutorial.lhs
+  project_template/tutorial/src/Tutorial.lhs,
+  test/snap-testsuite.cabal,
+  test/runTestsAndCoverage.sh
 
 Executable snap
   hs-source-dirs: src
