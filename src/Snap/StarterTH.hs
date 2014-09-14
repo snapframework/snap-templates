@@ -34,9 +34,9 @@ getDirs _ (Failed _ _) = []
 readTree :: FilePath -> IO ([DirData], [FileData])
 readTree dir = do
     d <- readDirectory $ dir </> "."
-    let ps = zipPaths $ "" :/ (free d)
+    let ps = zipPaths $ "" :/ (dirTree d)
         fd = F.foldr (:) [] ps
-        dirs = getDirs [] $ free d
+        dirs = getDirs [] $ dirTree d
     return (drop 1 dirs, fd)
 
 
