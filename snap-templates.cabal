@@ -1,4 +1,4 @@
-name:           snap-template
+name:           snap-templates
 version:        1.0.0.0
 synopsis:       Scaffolding CLI for the Snap Framework
 description:
