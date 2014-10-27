@@ -62,9 +62,9 @@ You can also install the full code in the current directory with the command
 
 > {-# LANGUAGE TemplateHaskell #-}
 > {-# LANGUAGE OverloadedStrings #-}
-> 
+>
 > module Main where
-> 
+>
 > import           Control.Lens.TH
 > import           Data.IORef
 > import qualified Data.ByteString.Char8 as B
@@ -117,7 +117,7 @@ snaplet functions.
 
 nestSnaplet
 -----------
-   
+
 All calls to child snaplet initializer functions must be wrapped in a call to
 nestSnaplet.  The first parameter is a URL path segment that is used to prefix
 all routes defined by the snaplet.  This lets you ensure that there will be no
@@ -201,7 +201,7 @@ and writes it into the response with the `writeText` function defined by the
 snap-core project.  The type variables 'b' and 'v' indicate that this function
 will work in any snaplet with any base application.  The 'with' function is
 used to run `namePage` in the context of the snaplets foo and bar for the
-corresponding routes.  
+corresponding routes.
 
 Site Reloading
 --------------
@@ -360,4 +360,3 @@ in by default.  Resource installation *only* happens when the `snaplets/foo`
 directory does not exist.  If you want to get the latest version of the
 filesystem resources, remove the `snaplets/foo` directory, and restart your
 app.
-
