@@ -12,5 +12,5 @@
 >     return Foo
 >
 > barInit :: SnapletLens b Foo -> SnapletInit b Bar
-> barInit h = makeSnaplet "bar" "Bar snaplet" Nothing $ do
+> barInit _h = makeSnaplet "bar" "Bar snaplet" Nothing $ do
 >     return Bar
