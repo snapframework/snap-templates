@@ -9,7 +9,7 @@ description:
     .
     To get started, issue the following sequence of commands:
     .
-    @$ cabal install snap
+    @$ cabal install snap-templates
     $ mkdir myproject
     $ cd myproject
     $ snap init@
