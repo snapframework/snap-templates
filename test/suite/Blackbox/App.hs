@@ -58,12 +58,12 @@ app = makeSnaplet "app" "Test application" Nothing $ do
         { hcInterpretedSplices = do
             "appsplice" ## textSplice "contents of the app splice"
             "appconfig" ## shConfigSplice _lens }
-    addRoutes [ ("/hello", writeText "hello world")
-              , ("/routeWithSplice", routeWithSplice)
-              , ("/routeWithConfig", routeWithConfig)
-              , ("/public", serveDirectory "public")
-              , ("/sessionDemo", sessionDemo)
-              , ("/sessionTest", sessionTest)
+    addRoutes [ ("hello", writeText "hello world")
+              , ("routeWithSplice", routeWithSplice)
+              , ("routeWithConfig", routeWithConfig)
+              , ("public", serveDirectory "public")
+              , ("sessionDemo", sessionDemo)
+              , ("sessionTest", sessionTest)
               ]
     wrapSite (<|> heistServe)
     return $ App hs (over snapletValue fooMod fs) bs sm ns

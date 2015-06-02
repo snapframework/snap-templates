@@ -63,9 +63,9 @@ handleNewUser = method GET handleForm <|> method POST handleFormSubmit
 ------------------------------------------------------------------------------
 -- | The application's routes.
 routes :: [(ByteString, Handler App App ())]
-routes = [ ("/login",    with auth handleLoginSubmit)
-         , ("/logout",   with auth handleLogout)
-         , ("/new_user", with auth handleNewUser)
+routes = [ ("login",    with auth handleLoginSubmit)
+         , ("logout",   with auth handleLogout)
+         , ("new_user", with auth handleNewUser)
          , ("",          serveDirectory "static")
          ]
 
