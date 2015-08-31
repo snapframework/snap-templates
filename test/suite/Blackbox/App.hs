@@ -43,7 +43,7 @@ import Snap.Snaplet.Session.Backends.CookieSession
                             --------------------
                             --  THE SNAPLET   --
                             --------------------
-  
+
 ------------------------------------------------------------------------------
 app :: SnapletInit App App
 app = makeSnaplet "app" "Test application" Nothing $ do
@@ -51,13 +51,13 @@ app = makeSnaplet "app" "Test application" Nothing $ do
     fs <- nestSnaplet "foo" foo $ fooInit hs
     bs <- nestSnaplet "" bar $ nameSnaplet "baz" $ barInit hs foo
     sm <- nestSnaplet "session" session $
-          initCookieSessionManager "sitekey.txt" "_session" (Just (30 * 60))
+          initCookieSessionManager "sitekey.txt" "_session"
+                                   (Just "_domain") (Just (30 * 60))
     ns <- embedSnaplet "embed" embedded embeddedInit
     _lens <- getLens
-    addConfig hs $ mempty
-        { hcInterpretedSplices = do
-            "appsplice" ## textSplice "contents of the app splice"
-            "appconfig" ## shConfigSplice _lens }
+    let splices = do "appsplice" ## textSplice "contents of the app splice"
+                     "appconfig" ## shConfigSplice _lens
+    addConfig hs $ mempty & scInterpretedSplices .~ splices
     addRoutes [ ("hello", writeText "hello world")
               , ("routeWithSplice", routeWithSplice)
               , ("routeWithConfig", routeWithConfig)
@@ -113,4 +113,3 @@ sessionTest = withSession session $ do
 
 fooMod :: FooSnaplet -> FooSnaplet
 fooMod f = f { fooField = fooField f ++ "z" }
-
