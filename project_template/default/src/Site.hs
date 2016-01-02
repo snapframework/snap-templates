@@ -12,7 +12,6 @@ module Site
 import           Control.Applicative
 import           Data.ByteString (ByteString)
 import           Data.Map.Syntax ((##))
-import           Data.Monoid
 import qualified Data.Text as T
 import           Snap.Core
 import           Snap.Snaplet
