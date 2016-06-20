@@ -76,7 +76,7 @@ app :: SnapletInit App App
 app = makeSnaplet "app" "An snaplet example application." Nothing $ do
     h <- nestSnaplet "" heist $ heistInit "templates"
     s <- nestSnaplet "sess" sess $
-           initCookieSessionManager "site_key.txt" "sess" (Just 3600)
+           initCookieSessionManager "site_key.txt" "sess" Nothing (Just 3600)
 
     -- NOTE: We're using initJsonFileAuthManager here because it's easy and
     -- doesn't require any kind of database server to run.  In practice,

@@ -33,7 +33,7 @@ Executable projname
     snap-server               >= 1.0     && < 1.1,
     snap-loader-static        >= 1.0     && < 1.1,
     text                      >= 0.11    && < 1.3,
-    time                      >= 1.1     && < 1.6,
+    time                      >= 1.1     && < 1.7,
     xmlhtml                   >= 0.1
 
   if flag(old-base)
@@ -43,7 +43,7 @@ Executable projname
   else
     build-depends:
       base                      >= 4.4      && < 5,
-      lens                      >= 3.7.6    && < 4.7
+      lens                      >= 3.7.6    && < 4.15
 
   if flag(development)
     build-depends:
