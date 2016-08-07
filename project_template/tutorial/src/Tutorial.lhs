@@ -65,6 +65,9 @@ You can also install the full code in the current directory with the command
 >
 > module Main where
 >
+> import           Control.Applicative ((<|>))
+> import           Control.Monad.IO.Class (liftIO)
+> import           Control.Monad.State.Class (gets)
 > import           Control.Lens.TH
 > import           Data.IORef
 > import qualified Data.ByteString.Char8 as B
