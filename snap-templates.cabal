@@ -33,12 +33,11 @@ extra-source-files:
   README.md,
   project_template/barebones/.ghci,
   project_template/barebones/foo.cabal,
-  project_template/barebones/log/access.log,
+  project_template/barebones/log/placeholder,
   project_template/barebones/src/Main.hs,
   project_template/default/.ghci,
   project_template/default/foo.cabal,
-  project_template/default/log/access.log,
-  project_template/default/log/error.log,
+  project_template/default/log/placeholder,
   project_template/default/static/screen.css,
   project_template/default/snaplets/heist/templates/base.tpl,
   project_template/default/snaplets/heist/templates/index.tpl,
@@ -84,13 +83,11 @@ Executable snap
   other-extensions:
     TemplateHaskell
 
-  ghc-prof-options: -prof -auto-all
-
   if impl(ghc >= 6.12.0)
-    ghc-options: -Wall -fwarn-tabs -funbox-strict-fields -O2
+    ghc-options: -Wall -fwarn-tabs -funbox-strict-fields
                  -fno-warn-orphans -fno-warn-unused-do-bind
   else
-    ghc-options: -Wall -fwarn-tabs -funbox-strict-fields -O2
+    ghc-options: -Wall -fwarn-tabs -funbox-strict-fields
                  -fno-warn-orphans
 
 source-repository head
