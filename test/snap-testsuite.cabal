@@ -25,18 +25,18 @@ Executable snap-testsuite
     test-framework-smallcheck  >= 0.1      && < 0.3,
     unix                       >= 2.2.0.0  && < 2.8,
 
-    aeson                      >= 0.6      && < 0.10,
+    aeson                      >= 0.6      && < 1.3,
     attoparsec                 >= 0.10     && < 0.14,
     bytestring                 >= 0.9.1    && < 0.11,
     cereal                     >= 0.3      && < 0.5,
     clientsession              >= 0.8      && < 0.10,
-    comonad                    >= 1.1      && < 4.3,
+    comonad                    >= 1.1      && < 5.1,
     configurator               >= 0.1      && < 0.4,
     containers                 >= 0.3      && < 0.6,
-    directory                  >= 1.0      && < 1.3,
+    directory                  >= 1.0      && < 1.4,
     directory-tree             >= 0.10     && < 0.13,
     dlist                      >= 0.5      && < 0.8,
-    errors                     >= 1.4      && < 2.1,
+    errors                     >= 1.4      && < 2.3,
     filepath                   >= 1.1      && < 1.5,
     -- Blacklist bad versions of hashable
     hashable                  (>= 1.1 && < 1.2) || (>= 1.2.0.6 && <1.3),
@@ -53,13 +53,13 @@ Executable snap-testsuite
     snap-core                  >= 1.0      && < 1.1,
     snap-server                >= 1.0      && < 1.1,
     stm                        >= 2.2      && < 2.5,
-    syb                        >= 0.1      && < 0.6,
+    syb                        >= 0.1      && < 0.8,
     text                       >= 0.11     && < 1.3,
-    time                       >= 1.1      && < 1.6,
-    transformers               >= 0.2      && < 0.5,
+    time                       >= 1.1      && < 1.9,
+    transformers               >= 0.2      && < 0.6,
     transformers-base          >= 0.4      && < 0.5,
     unordered-containers       >= 0.1.4    && < 0.3,
-    vector                     >= 0.7.1    && < 0.12,
+    vector                     >= 0.7.1    && < 0.13,
     vector-algorithms          >= 0.4      && < 0.8,
     xmlhtml                    >= 0.1      && < 0.3
 
@@ -70,7 +70,7 @@ Executable snap-testsuite
   else
     build-depends:
       base                      >= 4.4      && < 5,
-      lens                      >= 3.7.6    && < 4.13
+      lens                      >= 3.7.6    && < 4.16
 
 
   extensions:
@@ -101,18 +101,18 @@ Executable app
   main-is:         AppMain.hs
 
   build-depends:
-    aeson                      >= 0.6      && < 0.10,
+    aeson                      >= 0.6      && < 1.3,
     attoparsec                 >= 0.10     && < 0.14,
     bytestring                 >= 0.9.1    && < 0.11,
     cereal                     >= 0.3      && < 0.5,
     clientsession              >= 0.8      && < 0.10,
-    comonad                    >= 1.1      && < 4.3,
+    comonad                    >= 1.1      && < 5.1,
     configurator               >= 0.1      && < 0.4,
     containers                 >= 0.3      && < 0.6,
-    directory                  >= 1.0      && < 1.3,
+    directory                  >= 1.0      && < 1.4,
     directory-tree             >= 0.10     && < 0.13,
     dlist                      >= 0.5      && < 0.8,
-    errors                     >= 1.4      && < 2.1,
+    errors                     >= 1.4      && < 2.3,
     filepath                   >= 1.1      && < 1.5,
     -- Blacklist bad versions of hashable
     hashable                  (>= 1.1 && < 1.2) || (>= 1.2.0.6 && <1.3),
@@ -129,13 +129,13 @@ Executable app
     snap-core                  >= 1.0      && < 1.1,
     snap-server                >= 1.0      && < 1.1,
     stm                        >= 2.2      && < 2.5,
-    syb                        >= 0.1      && < 0.6,
+    syb                        >= 0.1      && < 0.8,
     text                       >= 0.11     && < 1.3,
-    time                       >= 1.1      && < 1.6,
-    transformers               >= 0.2      && < 0.5,
+    time                       >= 1.1      && < 1.9,
+    transformers               >= 0.2      && < 0.6,
     transformers-base          >= 0.4      && < 0.5,
     unordered-containers       >= 0.1.4    && < 0.3,
-    vector                     >= 0.7.1    && < 0.12,
+    vector                     >= 0.7.1    && < 0.13,
     vector-algorithms          >= 0.4      && < 0.8,
     xmlhtml                    >= 0.1      && < 0.3
 
@@ -146,7 +146,7 @@ Executable app
   else
     build-depends:
       base                      >= 4.4      && < 5,
-      lens                      >= 3.7.6    && < 4.13
+      lens                      >= 3.7.6    && < 4.16
 
   extensions:
     BangPatterns,
@@ -187,18 +187,18 @@ Executable nesttest
     test-framework-smallcheck  >= 0.1      && < 0.3,
     unix                       >= 2.2.0.0  && < 2.8,
 
-    aeson                      >= 0.6      && < 0.10,
+    aeson                      >= 0.6      && < 1.3,
     attoparsec                 >= 0.10     && < 0.14,
     bytestring                 >= 0.9.1    && < 0.11,
     cereal                     >= 0.3      && < 0.5,
     clientsession              >= 0.8      && < 0.10,
-    comonad                    >= 1.1      && < 4.3,
+    comonad                    >= 1.1      && < 5.1,
     configurator               >= 0.1      && < 0.4,
     containers                 >= 0.3      && < 0.6,
-    directory                  >= 1.0      && < 1.3,
+    directory                  >= 1.0      && < 1.4,
     directory-tree             >= 0.10     && < 0.13,
     dlist                      >= 0.5      && < 0.8,
-    errors                     >= 1.4      && < 2.1,
+    errors                     >= 1.4      && < 2.3,
     filepath                   >= 1.1      && < 1.5,
     -- Blacklist bad versions of hashable
     hashable                  (>= 1.1 && < 1.2) || (>= 1.2.0.6 && <1.3),
@@ -215,13 +215,13 @@ Executable nesttest
     snap-core                  >= 1.0      && < 1.1,
     snap-server                >= 1.0      && < 1.1,
     stm                        >= 2.2      && < 2.5,
-    syb                        >= 0.1      && < 0.6,
+    syb                        >= 0.1      && < 0.8,
     text                       >= 0.11     && < 1.3,
-    time                       >= 1.1      && < 1.6,
-    transformers               >= 0.2      && < 0.5,
+    time                       >= 1.1      && < 1.9,
+    transformers               >= 0.2      && < 0.6,
     transformers-base          >= 0.4      && < 0.5,
     unordered-containers       >= 0.1.4    && < 0.3,
-    vector                     >= 0.7.1    && < 0.12,
+    vector                     >= 0.7.1    && < 0.13,
     vector-algorithms          >= 0.4      && < 0.8,
     xmlhtml                    >= 0.1      && < 0.3
 
@@ -232,7 +232,7 @@ Executable nesttest
   else
     build-depends:
       base                      >= 4.4      && < 5,
-      lens                      >= 3.7.6    && < 4.13
+      lens                      >= 3.7.6    && < 4.16
 
 
   extensions:
