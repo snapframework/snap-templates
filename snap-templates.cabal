@@ -1,5 +1,5 @@
 name:           snap-templates
-version:        1.0.0.1
+version:        1.0.0.2
 synopsis:       Scaffolding CLI for the Snap Framework
 description:
     This is the Scaffolding CLI for the official Snap Framework libraries.
